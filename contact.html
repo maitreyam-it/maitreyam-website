@@ -25,7 +25,7 @@
     <p>Location: Pune, Maharashtra, India</p>
 
     <h2>Send us a Message</h2>
-		<form action="https://formsubmit.co/info.maitreyam@gmail.com" method="POST">
+    <form id="contact-form" action="https://formsubmit.co/info.maitreyam@gmail.com" method="POST">
 		<label for="name">Name:</label><br>
 		<input type="text" id="name" name="name" required><br><br>
 		
@@ -40,12 +40,14 @@
 		
 		<!-- Prevent spam -->
 		<input type="hidden" name="_captcha" value="false">
-		<!-- Redirect back to your contact page after success -->
-		<input type="hidden" name="_next" value="https://maitreyam.com/contact.html">
 		
 		<!-- ✅ Submit button -->
 		<button type="submit">Send Message</button>
-		</form>
+    </form>
+
+<!-- Success message placeholder -->
+<div id="form-success" class="success-message"></div>
+
 
   </main>
 

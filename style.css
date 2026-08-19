@@ -1,104 +1,142 @@
+/* Global */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to right, #1c1c1c, #2c3e50);
+  color: #fff;
   text-align: center;
-  background-color: #f9f9f9;
 }
 
+/* Header / Hero */
 header {
-  background: #2c3e50;
-  color: white;
+  background: rgba(0,0,0,0.7);
   padding: 20px;
 }
-
-nav a {
+header nav a {
   margin: 0 15px;
-  color: #ecf0f1;
+  color: #1abc9c;
   text-decoration: none;
 }
-
-nav a:hover {
+header nav a:hover {
   text-decoration: underline;
 }
-
-main {
-  padding: 40px;
-}
-
-footer {
-  background: #2c3e50;
-  color: white;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/* --- Header --- */
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* centers logo + h1 */
+  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  text-align: center;
 }
-
 .logo {
   height: 80px;
   width: auto;
 }
-
 header h1 {
   font-size: 22px;
   margin: 0;
+}
+
+/* Hero Banner */
+.hero {
+  background: url('images/background.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+}
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+}
+.btn {
+  background: #e67e22;
   color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: #d35400;
 }
 
-/* --- Slider Styling --- */
+/* Services */
+.services {
+  padding: 50px 20px;
+}
+.service-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.service {
+  background: #34495e;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+/* Metrics */
+.metrics {
+  background: #1abc9c;
+  padding: 50px 20px;
+}
+.metrics-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.metric h3 {
+  font-size: 40px;
+  margin: 0;
+}
+.metric p {
+  margin: 5px 0 0;
+}
+
+/* Portfolio Cards */
+.portfolio-highlight {
+  padding: 50px 20px;
+}
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  background: #2c3e50;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+}
+
+/* Slider */
 .slider {
-  position: relative;
-  width: 100%;          /* full width across screen */
-  max-width: 1200px;    /* optional limit for very large screens */
-  height: 500px;        /* adjust height for desktop */
-  margin: 20px auto;
-  border: 2px solid #ccc;
+  width: 100%;
+  height: 500px;
   overflow: hidden;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
 }
-
 .slides {
   display: flex;
   transition: transform 1s ease-in-out;
 }
-
 .slides img {
-  width: 100%;          /* each image fills slider width */
-  height: 500px;        /* fixed height */
-  object-fit: cover;    /* crops nicely without distortion */
-  flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .slider {
-    height: 300px;      /* smaller height on tablets */
-  }
-  .slides img {
-    height: 300px;
-  }
+/* Contact Form */
+form input, form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
 }
-
-@media (max-width: 480px) {
-  .slider {
-    height: 200px;      /* smaller height on mobile */
-  }
-  .slides img {
-    height: 200px;
-  }
-}
-
-
 button {
   background-color: #2c3e50;
   color: white;
@@ -108,7 +146,41 @@ button {
   font-size: 16px;
   border-radius: 4px;
 }
-
 button:hover {
   background-color: #34495e;
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #1abc9c;
+  color: white;
+  border-radius: 5px;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slides img { height: 300px; }
+  .logo { height: 60px; }
+  header h1 { font-size: 18px; }
+}
+@media (max-width: 480px) {
+  .slides img { height: 200px; }
+  .logo { height: 50px; }
+  header h1 { font-size: 16px; }
 }
