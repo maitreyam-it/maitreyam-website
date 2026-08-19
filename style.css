@@ -78,7 +78,7 @@ header h1 { font-size: 22px; margin: 0; }
   transition: transform 1s ease-in-out;
 }
 .slides img {
-  width: 150%;
+  width: 220%;
   height: 600px;
   object-fit: cover;
 }
