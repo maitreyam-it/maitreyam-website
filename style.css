@@ -36,19 +36,21 @@ footer {
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centers logo + text together */
-  gap: 15px; /* space between logo and text */
+  display: flex;              /* puts logo + h1 side by side */
+  align-items: center;        /* vertically aligns them */
+  justify-content: flex-start;/* keeps them left aligned */
+  gap: 15px;                  /* space between logo and text */
 }
 
 .logo {
-  height: 80px; /* adjust size */
+  height: 80px;               /* adjust logo size */
+  width: auto;                /* keeps aspect ratio */
 }
 
 header h1 {
   font-size: 22px;
   margin: 0;
+  color: white;               /* matches your header background */
 }
 
 /* --- Slider Styling --- */
