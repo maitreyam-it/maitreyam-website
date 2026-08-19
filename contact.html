@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us - MAITREYAM IT CONSULTANCY & SERVICES (OPC) PRIVATE LIMITED</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <div class="header-container">
+      <img src="images/logo.png" alt="Company Logo" class="logo">
+      <h1>Contact Us</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
     </nav>
   </header>
+
   <main>
     <h2>Get in Touch</h2>
     <p>Email: info.maitreyam@gmail.com</p>
@@ -21,14 +26,17 @@
 
     <h2>Send us a Message</h2>
     <form action="https://formsubmit.co/info.maitreyam@gmail.com" method="POST">
-      <label>Name:</label><br>
-      <input type="text" name="name" required><br><br>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
 
-      <label>Email:</label><br>
-      <input type="email" name="email" required><br><br>
+      <label for="contact">Contact Number:</label><br>
+      <input type="text" id="contact" name="contact" required><br><br>
 
-      <label>Message:</label><br>
-      <textarea name="message" rows="5" required></textarea><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
       <!-- Prevent spam -->
       <input type="hidden" name="_captcha" value="false">
@@ -38,6 +46,7 @@
       <button type="submit">Send</button>
     </form>
   </main>
+
   <footer>
     <p>© 2026 MAITREYAM IT CONSULTANCY & SERVICES (OPC) PRIVATE LIMITED</p>
   </footer>
