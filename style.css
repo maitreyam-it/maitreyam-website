@@ -59,8 +59,9 @@ header h1 {
 /* --- Slider Styling --- */
 .slider {
   position: relative;
-  width: 600px;   /* fixed square */
-  height: 600px;  /* square height */
+  width: 100%;          /* full width across screen */
+  max-width: 1200px;    /* optional limit for very large screens */
+  height: 500px;        /* adjust height for desktop */
   margin: 20px auto;
   border: 2px solid #ccc;
   overflow: hidden;
@@ -72,26 +73,42 @@ header h1 {
 }
 
 .slides img {
-  width: 600px;
-  height: 600px;
-  object-fit: cover;
+  width: 100%;          /* each image fills slider width */
+  height: 500px;        /* fixed height */
+  object-fit: cover;    /* crops nicely without distortion */
   flex-shrink: 0;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .slider {
-    width: 100%;
-    height: auto;
+    height: 300px;      /* smaller height on tablets */
   }
   .slides img {
-    width: 100%;
-    height: auto;
+    height: 300px;
   }
-  header h1 {
-    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 200px;      /* smaller height on mobile */
   }
-  .logo {
-    height: 60px;
+  .slides img {
+    height: 200px;
   }
+}
+
+
+button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #34495e;
 }
