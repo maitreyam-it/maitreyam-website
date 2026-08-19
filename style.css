@@ -35,6 +35,19 @@ footer {
   width: 100%;
 }
 
+.logo {
+  height: 80px;       /* adjust size */
+  margin-right: 15px; /* space between logo and text */
+  vertical-align: middle;
+}
+header h1 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 20px;
+}
+
+
 /* --- Slider Styling --- */
 .slider {
   position: relative;
