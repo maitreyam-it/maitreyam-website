@@ -19,7 +19,7 @@ body {
   margin: 20px auto;
   max-width: 1240px;
 }
-.company-text h1 { font-size: 22px; margin: 0; color: #00ffff; } /* accent */
+.company-text h1 { font-size: 22px; margin: 0; color: #00ffff; }
 .company-text p { margin: 5px 0 0; font-size: 16px; color: #00ffff; }
 
 /* Navbar */
@@ -45,7 +45,7 @@ body {
 .navbar a:hover {
   background-color: rgba(0,255,255,0.2);
   color: #00ffff;
-  text-shadow: 0 0 8px #00ffff; /* shiny glow */
+  text-shadow: 0 0 8px #00ffff;
 }
 
 /* What's New */
@@ -71,7 +71,7 @@ body {
   color: #fff;
 }
 .news-card h3 { margin: 15px; color: #00ffff; }
-.news-card p { margin: 0 15px 15px; color: #ddd; }
+.news-card p { margin: 0 15px 15px; color: #fff; }
 .prev, .next {
   position: absolute; top: 50%; transform: translateY(-50%);
   background: rgba(0,0,0,0.5); color: #fff;
@@ -104,7 +104,7 @@ body {
 }
 .metrics h2 { color: #00ffff; }
 .metric h3 { font-size:40px; margin:0; color:#00ffff; }
-.metric p { margin:5px 0 0; }
+.metric p { margin:5px 0 0; color:#fff; }
 
 /* Portfolio */
 .portfolio-highlight {
