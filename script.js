@@ -9,7 +9,7 @@ let currentIndex = 0;
 const cardsPerView = 4; // show 4 at a time
 const cardWidth = 300;  // width of each card
 const cardMargin = 20;  // left+right margin (10px each side)
-const slideWidth = cardsPerView * (cardWidth + cardMargin); 
+const slideWidth = cardsPerView * (cardWidth + cardMargin);
 const totalSlides = Math.ceil(cards.length / cardsPerView);
 
 // Create dots dynamically
