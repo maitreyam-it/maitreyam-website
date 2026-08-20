@@ -7,32 +7,34 @@ body {
   background: url('images/tech-bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #000; /* default text black */
-  text-align: center;
+}
+
+/* Container utility */
+.section {
+  max-width: 1240px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background: rgba(10,25,47,0.60);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
 }
 
 /* ===========================
    Header & Logo
 =========================== */
 .site-header {
-  background: rgba(10,25,47,0.60);
-  backdrop-filter: blur(8px);
-  color: #000;
-  padding: 20px;
+  @extend .section;
   text-align: center;
-  border-radius: 12px;
-  margin: 20px auto;
-  max-width: 1240px;
 }
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
 }
 .logo { height: 80px; }
-.company-text h1 { font-size: 22px; margin: 0; color: #000; }
-.company-text p { margin: 5px 0 0; font-size: 16px; color: #000; }
+.company-text h1 { font-size: 28px; margin: 0; color: #000; }
+.company-text p { font-size: 16px; color: #000; }
 
 /* ===========================
    Navbar
@@ -50,46 +52,37 @@ body {
 .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; }
 .navbar a {
   display: block;
-  padding: 20px 40px;
+  padding: 20px 30px;
   color: #000;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s;
 }
 .navbar a:hover {
   background-color: rgba(0,0,0,0.1);
-  color: #000;
 }
 
 /* ===========================
-   What's New (Carousel/Slider)
+   Carousel / What's New
 =========================== */
-.whats-new {
-  background: rgba(10,25,47,0.60);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  color: #000;
-  padding: 50px 20px;
-  margin: 40px auto;
-}
+.whats-new { @extend .section; text-align: center; }
 .whats-new h2 { font-size: 28px; margin-bottom: 30px; color: #000; }
 
-.carousel { position: relative; overflow: hidden; max-width: 1240px; margin: 0 auto; }
-.carousel-track { display: flex; flex-wrap: nowrap; transition: transform 0.5s ease; }
+.carousel { position: relative; overflow: hidden; }
+.carousel-track { display: flex; transition: transform 0.5s ease; }
 .news-card {
   flex: 0 0 300px;
   margin: 0 10px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.15);
   border-radius: 8px;
   text-align: left;
   color: #000;
 }
-.news-card h3 { margin: 15px; color: #000; }
-.news-card p { margin: 0 15px 15px; color: #000; }
+.news-card h3 { margin: 15px; font-size: 20px; }
+.news-card p { margin: 0 15px 15px; }
 .prev, .next {
   position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(0,0,0,0.5); color: #000;
+  background: rgba(0,0,0,0.5); color: #fff;
   border: none; padding: 10px; cursor: pointer; border-radius: 50%;
 }
 .prev { left: 10px; } .next { right: 10px; }
@@ -97,75 +90,78 @@ body {
 .dot.active { background: #000; }
 
 /* ===========================
-   Services Section
+   Services
 =========================== */
-.services {
-  background: rgba(10,25,47,0.60);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  color: #000;
-  padding: 50px 20px;
-  margin: 40px auto;
-}
-.services h2 { color: #000; }
+.services { @extend .section; }
+.services h2 { color: #000; text-align: center; margin-bottom: 30px; }
 .service-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.service { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:200px; color:#000; }
+.service {
+  background: rgba(255,255,255,0.15);
+  padding:20px;
+  border-radius:8px;
+  width:220px;
+  text-align:center;
+  color:#000;
+}
 
 /* ===========================
-   Metrics Section
+   Metrics
 =========================== */
-.metrics {
-  background: rgba(10,25,47,0.60);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  color: #000;
-  padding: 50px 20px;
-  margin: 40px auto;
-}
-.metrics h2 { color: #000; }
+.metrics { @extend .section; text-align: center; }
+.metrics h2 { color: #000; margin-bottom: 30px; }
 .metrics-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; }
 .metric h3 { font-size:40px; margin:0; color:#000; }
-.metric p { margin:5px 0 0; color:#000; }
+.metric p { margin:5px 0 0; }
 
 /* ===========================
-   Portfolio Section
+   Portfolio
 =========================== */
-.portfolio-highlight {
-  background: rgba(10,25,47,0.60);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  color: #000;
-  padding: 50px 20px;
-  margin: 40px auto;
-}
-.portfolio-highlight h2 { color: #000; }
+.portfolio-highlight { @extend .section; }
+.portfolio-highlight h2 { color: #000; text-align: center; margin-bottom: 30px; }
 .portfolio-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.card { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:250px; color:#000; }
+.card {
+  background: rgba(255,255,255,0.15);
+  padding:20px;
+  border-radius:8px;
+  width:250px;
+  color:#000;
+  text-align:center;
+}
 
 /* ===========================
-   Contact Section
+   Contact
 =========================== */
-.contact {
-  background: rgba(10,25,47,0.60);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  color: #000;
-  padding: 50px 20px;
-  margin: 40px auto;
-}
-.contact h2 { color: #000; }
+.contact { @extend .section; }
+.contact h2 { color: #000; text-align: center; margin-bottom: 30px; }
 .contact-container { display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; }
-.contact-form { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; color:#000; }
-.contact-form label { display:block; margin-top:10px; color:#000; }
-.contact-form input, .contact-form textarea { width:100%; padding:10px; margin-top:5px; border:none; border-radius:4px; color:#000; }
+.contact-form {
+  flex:1;
+  background: rgba(255,255,255,0.15);
+  padding:20px;
+  border-radius:8px;
+  text-align:left;
+  color:#000;
+}
+.contact-form label { display:block; margin-top:10px; }
+.contact-form input, .contact-form textarea {
+  width:100%; padding:10px; margin-top:5px;
+  border:none; border-radius:4px; color:#000;
+}
 .contact-form button {
   margin-top:15px; background:#000; color:#fff;
   border:none; padding:10px 20px; cursor:pointer; border-radius:4px;
   transition: box-shadow 0.3s;
 }
 .contact-form button:hover { box-shadow: 0 0 12px #000; }
-.contact-info { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; color:#000; }
-.contact-info h3 { margin-top:15px; color:#000; }
+.contact-info {
+  flex:1;
+  background: rgba(255,255,255,0.15);
+  padding:20px;
+  border-radius:8px;
+  text-align:left;
+  color:#000;
+}
+.contact-info h3 { margin-top:15px; }
 
 /* ===========================
    Footer
