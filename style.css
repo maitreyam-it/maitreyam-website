@@ -1,6 +1,6 @@
 /* =========================================================
    MAITREYAM IT CONSULTANCY
-   MODERN TECHNOLOGY / GLASSMORPHISM THEME
+   MODERN TECHNOLOGY GLASS THEME
 ========================================================= */
 
 
@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 body {
@@ -28,16 +29,16 @@ body {
 
   color: #ffffff;
 
+  line-height: 1.6;
+
   background:
     linear-gradient(
       135deg,
-      rgba(2, 14, 28, 0.62),
-      rgba(4, 34, 63, 0.42)
+      rgba(2, 14, 28, 0.65),
+      rgba(4, 34, 63, 0.45)
     ),
     url("images/tech-bg.jpg")
       center center / cover fixed no-repeat;
-
-  line-height: 1.6;
 }
 
 button,
@@ -69,28 +70,28 @@ a {
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.17),
       rgba(255, 255, 255, 0.07)
     );
 
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
-  border:
-    1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid
+    rgba(255, 255, 255, 0.23);
 
   border-radius: 24px;
 
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.30),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.35);
 }
 
 .header-container {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 28px;
@@ -104,7 +105,8 @@ a {
 
   filter:
     drop-shadow(
-      0 8px 15px rgba(0, 0, 0, 0.30)
+      0 8px 15px
+      rgba(0, 0, 0, 0.30)
     );
 }
 
@@ -115,7 +117,8 @@ a {
 .company-text h1 {
   margin: 0;
 
-  font-size: clamp(22px, 3vw, 32px);
+  font-size:
+    clamp(22px, 3vw, 32px);
 
   line-height: 1.2;
 
@@ -125,7 +128,7 @@ a {
 }
 
 .company-type {
-  margin: 4px 0 6px;
+  margin: 4px 0 5px;
 
   font-size: 14px;
 
@@ -134,7 +137,7 @@ a {
   letter-spacing: 2px;
 
   color:
-    rgba(255, 255, 255, 0.70);
+    rgba(255, 255, 255, 0.72);
 }
 
 .tagline {
@@ -142,8 +145,14 @@ a {
 
   font-size: 15px;
 
+  font-style: italic;
+
   color:
-    rgba(255, 255, 255, 0.82);
+    rgba(255, 255, 255, 0.88);
+
+  text-shadow:
+    0 0 12px
+    rgba(255, 255, 255, 0.18);
 }
 
 
@@ -156,12 +165,12 @@ a {
 
   top: 0;
 
-  z-index: 100;
+  z-index: 1000;
 
   width: 100%;
 
   background:
-    rgba(3, 16, 32, 0.80);
+    rgba(3, 16, 32, 0.84);
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -173,38 +182,41 @@ a {
     1px solid rgba(255, 255, 255, 0.18);
 
   box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.22);
+    0 8px 30px
+    rgba(0, 0, 0, 0.24);
 }
 
 .nav-container {
-  width: min(1100px, 100%);
-
-  margin: auto;
+  width: 100%;
 }
 
 .nav-links {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 4px;
+  gap: 5px;
 
   margin: 0;
-
   padding: 0;
 
   list-style: none;
 }
 
+.nav-links li {
+  list-style: none;
+}
+
 .nav-links a {
+  position: relative;
+
   display: block;
 
-  padding: 17px 24px;
+  padding: 17px 25px;
 
   color:
-    rgba(255, 255, 255, 0.82);
+    rgba(255, 255, 255, 0.78);
 
   text-decoration: none;
 
@@ -212,7 +224,7 @@ a {
 
   font-weight: 600;
 
-  letter-spacing: 0.3px;
+  white-space: nowrap;
 
   border-radius: 10px;
 
@@ -222,19 +234,48 @@ a {
     transform 0.25s ease;
 }
 
-.nav-links a:hover {
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 7px;
+
+  width: 0;
+  height: 2px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.85);
+
+  transition:
+    width 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
   color: #ffffff;
 
   background:
-    rgba(255, 255, 255, 0.10);
+    rgba(255, 255, 255, 0.09);
 
   transform:
     translateY(-1px);
 }
 
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 28px;
+}
+
 
 /* =========================================================
-   MAIN SECTION GLASS
+   MAIN GLASS SECTIONS
 ========================================================= */
 
 .glass-section {
@@ -251,46 +292,55 @@ a {
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.19),
-      rgba(255, 255, 255, 0.08)
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.075)
     );
 
-  backdrop-filter: blur(22px) saturate(130%);
-  -webkit-backdrop-filter: blur(22px) saturate(130%);
+  backdrop-filter:
+    blur(22px)
+    saturate(130%);
+
+  -webkit-backdrop-filter:
+    blur(22px)
+    saturate(130%);
 
   border:
-    1px solid rgba(255, 255, 255, 0.25);
+    1px solid
+    rgba(255, 255, 255, 0.25);
 
   border-radius: 28px;
 
   box-shadow:
-    0 22px 55px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.34),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+    0 22px 55px
+      rgba(0, 0, 0, 0.28),
 
-  overflow: hidden;
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.35),
+
+    inset 0 -1px 0
+      rgba(255, 255, 255, 0.06);
 }
 
 
-/* Section glow */
+/* Separate section glow */
 
 .glass-section::before {
   content: "";
 
   position: absolute;
 
-  top: -150px;
+  top: -130px;
   right: -100px;
 
   width: 300px;
   height: 300px;
 
-  background:
-    rgba(100, 200, 255, 0.08);
-
   border-radius: 50%;
 
-  filter: blur(60px);
+  background:
+    rgba(100, 200, 255, 0.07);
+
+  filter: blur(65px);
 
   pointer-events: none;
 
@@ -298,7 +348,7 @@ a {
 }
 
 
-/* Section top shine */
+/* Top shine */
 
 .glass-section::after {
   content: "";
@@ -328,11 +378,10 @@ a {
 ========================================================= */
 
 .section-heading {
-  position: relative;
-
   max-width: 800px;
 
-  margin: 0 auto 38px;
+  margin:
+    0 auto 40px;
 
   text-align: center;
 }
@@ -342,10 +391,11 @@ a {
 
   margin-bottom: 10px;
 
-  padding: 5px 12px;
+  padding: 5px 13px;
 
   border:
-    1px solid rgba(255, 255, 255, 0.20);
+    1px solid
+    rgba(255, 255, 255, 0.20);
 
   border-radius: 30px;
 
@@ -353,7 +403,7 @@ a {
     rgba(255, 255, 255, 0.08);
 
   color:
-    rgba(255, 255, 255, 0.70);
+    rgba(255, 255, 255, 0.68);
 
   font-size: 10px;
 
@@ -365,14 +415,16 @@ a {
 .section-heading h2 {
   margin: 0;
 
-  font-size: clamp(27px, 4vw, 36px);
+  font-size:
+    clamp(28px, 4vw, 36px);
 
   line-height: 1.2;
 
   color: #ffffff;
 
   text-shadow:
-    0 4px 18px rgba(0, 0, 0, 0.35);
+    0 4px 18px
+    rgba(0, 0, 0, 0.35);
 }
 
 .section-heading h2::after {
@@ -380,7 +432,7 @@ a {
 
   display: block;
 
-  width: 55px;
+  width: 60px;
   height: 3px;
 
   margin: 14px auto 0;
@@ -389,20 +441,25 @@ a {
 
   background:
     rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 0 12px
+    rgba(255, 255, 255, 0.25);
 }
 
 .section-heading p {
-  margin: 14px auto 0;
+  margin:
+    15px auto 0;
 
   color:
     rgba(255, 255, 255, 0.70);
 
-  font-size: 15px;
+  font-size: 14px;
 }
 
 
 /* =========================================================
-   WHAT'S NEW CAROUSEL
+   WHAT'S NEW
 ========================================================= */
 
 .carousel {
@@ -412,9 +469,9 @@ a {
 }
 
 .carousel-window {
-  overflow: hidden;
-
   width: 100%;
+
+  overflow: hidden;
 }
 
 .carousel-track {
@@ -423,13 +480,15 @@ a {
   align-items: stretch;
 
   transition:
-    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transform 0.65s
+    cubic-bezier(0.22, 1, 0.36, 1);
 
   will-change: transform;
 }
 
 .news-card {
-  flex: 0 0 calc(25% - 15px);
+  flex: 0 0
+    calc(25% - 15px);
 
   margin-right: 20px;
 
@@ -442,21 +501,19 @@ a {
       rgba(255, 255, 255, 0.045)
     );
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
   border:
-    1px solid rgba(255, 255, 255, 0.18);
+    1px solid
+    rgba(255, 255, 255, 0.18);
 
   border-radius: 18px;
 
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.18);
+    0 10px 25px
+    rgba(0, 0, 0, 0.18);
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
+    background 0.3s ease;
 }
 
 .news-card:hover {
@@ -465,9 +522,6 @@ a {
 
   background:
     rgba(255, 255, 255, 0.17);
-
-  border-color:
-    rgba(255, 255, 255, 0.30);
 }
 
 .news-card img {
@@ -478,10 +532,11 @@ a {
 
   object-fit: cover;
 
-  opacity: 0.88;
+  opacity: 0.90;
 
   border-bottom:
-    1px solid rgba(255, 255, 255, 0.14);
+    1px solid
+    rgba(255, 255, 255, 0.14);
 }
 
 .news-card-content {
@@ -491,10 +546,10 @@ a {
 .card-tag {
   display: inline-block;
 
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   color:
-    rgba(255, 255, 255, 0.58);
+    rgba(255, 255, 255, 0.55);
 
   font-size: 10px;
 
@@ -504,7 +559,8 @@ a {
 }
 
 .news-card h3 {
-  margin: 0 0 8px;
+  margin:
+    0 0 8px;
 
   font-size: 17px;
 
@@ -517,45 +573,52 @@ a {
   margin: 0;
 
   color:
-    rgba(255, 255, 255, 0.68);
+    rgba(255, 255, 255, 0.65);
 
   font-size: 13px;
 }
 
 
-/* Carousel buttons */
+/* =========================================================
+   CAROUSEL ARROWS
+========================================================= */
 
 .carousel-btn {
   position: absolute;
 
   top: 50%;
 
-  z-index: 5;
+  z-index: 10;
 
-  width: 42px;
-  height: 42px;
-
-  transform:
-    translateY(-50%);
+  width: 46px;
+  height: 46px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
+  transform:
+    translateY(-50%);
+
   border:
-    1px solid rgba(255, 255, 255, 0.25);
+    1px solid
+    rgba(255, 255, 255, 0.28);
 
   border-radius: 50%;
 
   background:
-    rgba(3, 18, 35, 0.78);
+    rgba(3, 18, 35, 0.82);
 
   color: #ffffff;
 
-  font-size: 26px;
+  font-size: 28px;
 
   line-height: 1;
+
+  box-shadow:
+    0 6px 18px
+    rgba(0, 0, 0, 0.25);
 
   transition:
     background 0.25s ease,
@@ -564,28 +627,30 @@ a {
 
 .carousel-btn:hover {
   background:
-    rgba(255, 255, 255, 0.18);
+    rgba(255, 255, 255, 0.20);
 
   transform:
-    translateY(-50%) scale(1.08);
+    translateY(-50%)
+    scale(1.08);
 }
 
 .prev {
-  left: -16px;
+  left: -23px;
 }
 
 .next {
-  right: -16px;
+  right: -23px;
 }
 
 
-/* Carousel dots */
+/* =========================================================
+   CAROUSEL DOTS
+========================================================= */
 
 .dots {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 7px;
@@ -597,14 +662,14 @@ a {
   width: 8px;
   height: 8px;
 
-  border: 0;
+  padding: 0;
+
+  border: none;
 
   border-radius: 50%;
 
   background:
     rgba(255, 255, 255, 0.25);
-
-  cursor: pointer;
 
   transition:
     width 0.25s ease,
@@ -612,52 +677,93 @@ a {
 }
 
 .dot.active {
-  width: 24px;
+  width: 25px;
 
   border-radius: 10px;
 
   background:
-    rgba(255, 255, 255, 0.80);
-}
+    rgba(255, 255, 255, 0.85);
 
-
-/* What's new message */
-
-.section-message {
-  max-width: 800px;
-
-  margin: 30px auto 0;
-
-  padding: 14px 20px;
-
-  text-align: center;
-
-  color:
-    rgba(255, 255, 255, 0.75);
-
-  font-size: 14px;
-
-  background:
-    rgba(255, 255, 255, 0.06);
-
-  border:
-    1px solid rgba(255, 255, 255, 0.12);
-
-  border-radius: 12px;
-}
-
-.message-icon {
-  margin-right: 8px;
-
-  color:
-    rgba(255, 255, 255, 0.65);
-
-  font-size: 9px;
+  box-shadow:
+    0 0 10px
+    rgba(255, 255, 255, 0.30);
 }
 
 
 /* =========================================================
-   SERVICES
+   ANIMATED MESSAGE
+========================================================= */
+
+.section-message {
+  max-width: 850px;
+
+  margin:
+    32px auto 0;
+
+  padding:
+    15px 20px;
+
+  text-align: center;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 14px;
+
+  animation:
+    messageGlow 3s
+    ease-in-out infinite;
+}
+
+.message-icon {
+  margin-right: 9px;
+
+  font-size: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+}
+
+@keyframes messageGlow {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px
+      rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+      0 0 0
+      rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    text-shadow:
+      0 0 12px
+      rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+      0 0 20px
+      rgba(255, 255, 255, 0.07);
+  }
+}
+
+
+/* =========================================================
+   EXPERTISE
 ========================================================= */
 
 .service-grid {
@@ -670,9 +776,9 @@ a {
 }
 
 .service-card {
-  min-height: 205px;
+  min-height: 210px;
 
-  padding: 25px 20px;
+  padding: 25px 18px;
 
   text-align: center;
 
@@ -684,16 +790,19 @@ a {
     );
 
   border:
-    1px solid rgba(255, 255, 255, 0.17);
+    1px solid
+    rgba(255, 255, 255, 0.17);
 
   border-radius: 18px;
 
   box-shadow:
-    0 8px 22px rgba(0, 0, 0, 0.14);
+    0 8px 22px
+    rgba(0, 0, 0, 0.14);
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease;
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .service-card:hover {
@@ -702,13 +811,17 @@ a {
 
   background:
     rgba(255, 255, 255, 0.16);
+
+  border-color:
+    rgba(255, 255, 255, 0.28);
 }
 
 .service-icon {
   width: 52px;
   height: 52px;
 
-  margin: 0 auto 18px;
+  margin:
+    0 auto 18px;
 
   display: flex;
 
@@ -716,7 +829,8 @@ a {
   justify-content: center;
 
   border:
-    1px solid rgba(255, 255, 255, 0.22);
+    1px solid
+    rgba(255, 255, 255, 0.22);
 
   border-radius: 15px;
 
@@ -728,14 +842,19 @@ a {
   font-size: 15px;
 
   font-weight: 700;
+
+  box-shadow:
+    0 0 18px
+    rgba(255, 255, 255, 0.05);
 }
 
 .service-card h3 {
-  margin: 0 0 8px;
-
-  font-size: 17px;
+  margin:
+    0 0 8px;
 
   color: #ffffff;
+
+  font-size: 17px;
 }
 
 .service-card p {
@@ -749,7 +868,7 @@ a {
 
 
 /* =========================================================
-   IMPACT / METRICS
+   IMPACT
 ========================================================= */
 
 .metrics-grid {
@@ -758,21 +877,39 @@ a {
   grid-template-columns:
     repeat(4, 1fr);
 
-  gap: 18px;
+  gap: 20px;
 }
 
 .metric-card {
+  min-height: 160px;
+
   padding: 30px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
 
   text-align: center;
 
   background:
-    rgba(255, 255, 255, 0.07);
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.045)
+    );
 
   border:
-    1px solid rgba(255, 255, 255, 0.16);
+    1px solid
+    rgba(255, 255, 255, 0.17);
 
   border-radius: 18px;
+
+  box-shadow:
+    0 8px 22px
+    rgba(0, 0, 0, 0.14);
 
   transition:
     transform 0.3s ease,
@@ -781,16 +918,16 @@ a {
 
 .metric-card:hover {
   transform:
-    translateY(-6px);
+    translateY(-7px);
 
   background:
-    rgba(255, 255, 255, 0.12);
+    rgba(255, 255, 255, 0.16);
 }
 
 .metric-number {
   display: block;
 
-  font-size: 42px;
+  font-size: 43px;
 
   font-weight: 700;
 
@@ -799,13 +936,14 @@ a {
   color: #ffffff;
 
   text-shadow:
-    0 0 20px rgba(255, 255, 255, 0.22);
+    0 0 18px
+    rgba(255, 255, 255, 0.25);
 }
 
 .metric-title {
   display: block;
 
-  margin-top: 12px;
+  margin-top: 13px;
 
   color:
     rgba(255, 255, 255, 0.65);
@@ -817,7 +955,7 @@ a {
 
 
 /* =========================================================
-   PORTFOLIO
+   FEATURED PROJECTS
 ========================================================= */
 
 .portfolio-grid {
@@ -852,9 +990,14 @@ a {
     );
 
   border:
-    1px solid rgba(255, 255, 255, 0.17);
+    1px solid
+    rgba(255, 255, 255, 0.17);
 
   border-radius: 20px;
+
+  box-shadow:
+    0 8px 22px
+    rgba(0, 0, 0, 0.14);
 
   transition:
     transform 0.3s ease,
@@ -872,14 +1015,13 @@ a {
 .project-number {
   position: absolute;
 
-  top: 20px;
-
-  right: 22px;
+  top: 16px;
+  right: 20px;
 
   color:
-    rgba(255, 255, 255, 0.16);
+    rgba(255, 255, 255, 0.13);
 
-  font-size: 42px;
+  font-size: 44px;
 
   font-weight: 800;
 }
@@ -889,7 +1031,8 @@ a {
 }
 
 .project-card h3 {
-  margin: 5px 0 10px;
+  margin:
+    5px 0 10px;
 
   font-size: 20px;
 
@@ -907,7 +1050,7 @@ a {
 
 
 /* =========================================================
-   CONTACT
+   CONTACT SECTION
 ========================================================= */
 
 .contact-container {
@@ -921,68 +1064,89 @@ a {
   align-items: stretch;
 }
 
+
+/* Contact box */
+
 .contact-form-wrapper,
 .contact-info {
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.11),
+      rgba(255, 255, 255, 0.12),
       rgba(255, 255, 255, 0.045)
     );
 
   border:
-    1px solid rgba(255, 255, 255, 0.17);
+    1px solid
+    rgba(255, 255, 255, 0.18);
 
   border-radius: 20px;
 
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.15);
+    0 10px 25px
+    rgba(0, 0, 0, 0.16);
 }
 
 .contact-form-wrapper {
   padding: 30px;
 }
 
+
+/* =========================================================
+   FORM - LABEL BESIDE FIELD
+========================================================= */
+
 .contact-form {
   display: flex;
 
   flex-direction: column;
 
-  gap: 17px;
+  gap: 18px;
 }
 
-.form-group {
-  display: flex;
+.form-row {
+  display: grid;
 
-  flex-direction: column;
+  grid-template-columns:
+    125px 1fr;
 
-  gap: 6px;
+  gap: 18px;
+
+  align-items: center;
 }
 
-.form-group label {
+.form-row label {
   color:
     rgba(255, 255, 255, 0.82);
 
   font-size: 13px;
 
   font-weight: 600;
+
+  text-align: right;
 }
 
-.form-group input,
-.form-group textarea {
+.input-wrapper {
+  width: 100%;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
   width: 100%;
 
-  padding: 13px 15px;
+  padding:
+    12px 14px;
 
   border:
-    1px solid rgba(255, 255, 255, 0.17);
+    1px solid
+    rgba(255, 255, 255, 0.18);
 
   border-radius: 10px;
 
   outline: none;
 
   background:
-    rgba(0, 10, 22, 0.22);
+    rgba(0, 10, 22, 0.25);
 
   color: #ffffff;
 
@@ -994,39 +1158,50 @@ a {
     box-shadow 0.25s ease;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color:
-    rgba(255, 255, 255, 0.40);
+.input-wrapper input {
+  height: 46px;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color:
-    rgba(255, 255, 255, 0.50);
-
-  background:
-    rgba(0, 10, 22, 0.32);
-
-  box-shadow:
-    0 0 0 3px rgba(255, 255, 255, 0.05);
-}
-
-.form-group textarea {
-  min-height: 130px;
+.input-wrapper textarea {
+  min-height: 125px;
 
   resize: vertical;
 }
 
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  color:
+    rgba(255, 255, 255, 0.38);
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+  border-color:
+    rgba(255, 255, 255, 0.50);
+
+  background:
+    rgba(0, 10, 22, 0.35);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(255, 255, 255, 0.05);
+}
+
+.form-button-row {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 5px;
+}
+
 .submit-button {
-  align-self: flex-start;
-
-  margin-top: 3px;
-
-  padding: 12px 22px;
+  padding:
+    12px 24px;
 
   border:
-    1px solid rgba(255, 255, 255, 0.25);
+    1px solid
+    rgba(255, 255, 255, 0.25);
 
   border-radius: 10px;
 
@@ -1041,7 +1216,8 @@ a {
 
   transition:
     background 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .submit-button span {
@@ -1054,28 +1230,34 @@ a {
 
   transform:
     translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 0, 0, 0.20);
 }
 
 .submit-button:disabled {
   opacity: 0.55;
 
   cursor: not-allowed;
-
-  transform: none;
 }
 
 
-/* Contact info */
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
 
 .contact-info {
   padding: 30px;
 }
 
 .info-item {
-  padding: 18px 0;
+  padding:
+    17px 0;
 
   border-bottom:
-    1px solid rgba(255, 255, 255, 0.09);
+    1px solid
+    rgba(255, 255, 255, 0.09);
 }
 
 .info-label {
@@ -1086,7 +1268,7 @@ a {
   color:
     rgba(255, 255, 255, 0.45);
 
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 700;
 
@@ -1114,7 +1296,8 @@ a {
 .contact-divider {
   height: 1px;
 
-  margin: 20px 0;
+  margin:
+    20px 0;
 
   background:
     rgba(255, 255, 255, 0.10);
@@ -1127,17 +1310,26 @@ a {
     rgba(255, 255, 255, 0.58);
 
   font-size: 13px;
+
+  font-style: italic;
 }
+
+
+/* =========================================================
+   FORM MESSAGE
+========================================================= */
 
 .form-message {
   display: none;
 
   margin-top: 18px;
 
-  padding: 14px 16px;
+  padding:
+    14px 16px;
 
   border:
-    1px solid rgba(255, 255, 255, 0.18);
+    1px solid
+    rgba(255, 255, 255, 0.18);
 
   border-radius: 10px;
 
@@ -1145,7 +1337,7 @@ a {
     rgba(255, 255, 255, 0.08);
 
   color:
-    rgba(255, 255, 255, 0.85);
+    rgba(255, 255, 255, 0.86);
 
   font-size: 13px;
 }
@@ -1156,27 +1348,35 @@ a {
 ========================================================= */
 
 footer {
-  width: min(1240px, calc(100% - 40px));
+  width:
+    min(1240px, calc(100% - 40px));
 
-  margin: 55px auto 25px;
+  margin:
+    55px auto 25px;
 
-  padding: 25px;
+  padding:
+    25px;
 
   text-align: center;
 
   background:
-    rgba(3, 16, 32, 0.78);
+    rgba(3, 16, 32, 0.80);
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
 
   border:
-    1px solid rgba(255, 255, 255, 0.16);
+    1px solid
+    rgba(255, 255, 255, 0.16);
 
   border-radius: 20px;
 
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.22);
+    0 12px 30px
+    rgba(0, 0, 0, 0.22);
 }
 
 .footer-content strong {
@@ -1186,7 +1386,8 @@ footer {
 }
 
 .footer-content p {
-  margin: 6px 0 0;
+  margin:
+    6px 0 0;
 
   color:
     rgba(255, 255, 255, 0.48);
@@ -1199,7 +1400,7 @@ footer {
    TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
   .service-grid {
     grid-template-columns:
@@ -1234,6 +1435,9 @@ footer {
     background-attachment: scroll;
   }
 
+
+  /* Header */
+
   .site-header {
     width:
       calc(100% - 24px);
@@ -1242,7 +1446,7 @@ footer {
       12px auto;
 
     padding:
-      22px 18px;
+      22px 16px;
 
     border-radius: 20px;
   }
@@ -1250,9 +1454,9 @@ footer {
   .header-container {
     flex-direction: column;
 
-    text-align: center;
-
     gap: 12px;
+
+    text-align: center;
   }
 
   .company-text {
@@ -1268,23 +1472,44 @@ footer {
     font-size: 20px;
   }
 
+  .company-type {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
   .tagline {
-    font-size: 13px;
+    font-size: 12px;
+  }
+
+
+  /* Navbar */
+
+  .navbar {
+    position: relative;
   }
 
   .nav-links {
+    display: flex;
+
     flex-wrap: wrap;
 
-    padding:
-      5px;
+    justify-content: center;
+
+    gap: 2px;
+
+    padding: 5px;
   }
 
   .nav-links a {
     padding:
-      10px 12px;
+      9px 10px;
 
-    font-size: 12px;
+    font-size: 11px;
   }
+
+
+  /* Sections */
 
   .glass-section {
     width:
@@ -1311,25 +1536,37 @@ footer {
     font-size: 13px;
   }
 
+
+  /* What's New */
+
   .news-card {
     flex-basis:
       calc(100% - 20px);
 
-    margin-right:
-      20px;
+    margin-right: 20px;
   }
 
   .news-card img {
-    height: 170px;
+    height: 175px;
   }
 
   .prev {
-    left: -8px;
+    left: -10px;
   }
 
   .next {
-    right: -8px;
+    right: -10px;
   }
+
+  .section-message {
+    font-size: 13px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  /* Expertise */
 
   .service-grid {
     grid-template-columns:
@@ -1339,7 +1576,7 @@ footer {
   }
 
   .service-card {
-    min-height: 180px;
+    min-height: 185px;
 
     padding:
       20px 12px;
@@ -1360,6 +1597,9 @@ footer {
     font-size: 12px;
   }
 
+
+  /* Impact */
+
   .metrics-grid {
     grid-template-columns:
       repeat(2, 1fr);
@@ -1368,8 +1608,10 @@ footer {
   }
 
   .metric-card {
+    min-height: 140px;
+
     padding:
-      25px 10px;
+      22px 10px;
   }
 
   .metric-number {
@@ -1380,10 +1622,16 @@ footer {
     font-size: 11px;
   }
 
+
+  /* Portfolio */
+
   .portfolio-grid {
     grid-template-columns:
       1fr;
   }
+
+
+  /* Contact */
 
   .contact-container {
     grid-template-columns:
@@ -1395,6 +1643,32 @@ footer {
     padding:
       22px;
   }
+
+  .form-row {
+    grid-template-columns:
+      1fr;
+
+    gap: 6px;
+  }
+
+  .form-row label {
+    text-align: left;
+  }
+
+  .input-wrapper input {
+    height: 44px;
+  }
+
+  .form-button-row {
+    justify-content: center;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+
+  /* Footer */
 
   footer {
     width:
@@ -1424,9 +1698,9 @@ footer {
 
   .nav-links a {
     padding:
-      9px 8px;
+      8px 7px;
 
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .news-card h3 {

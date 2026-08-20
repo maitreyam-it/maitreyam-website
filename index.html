@@ -16,22 +16,14 @@
 
   <meta
     name="theme-color"
-    content="#071a2f"
+    content="#06182c"
   >
 
-  <title>
-    MaitreyaM IT Consultancy & Services
-  </title>
+  <title>MaitreyaM IT Consultancy & Services</title>
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 
-  <script
-    src="script.js"
-    defer
-  ></script>
+  <script src="script.js" defer></script>
 </head>
 
 
@@ -77,14 +69,17 @@
        NAVIGATION
   ====================================================== -->
 
-  <nav
-    class="navbar"
-    aria-label="Main Navigation"
-  >
+  <nav class="navbar" aria-label="Main Navigation">
 
     <div class="nav-container">
 
       <ul class="nav-links">
+
+        <li>
+          <a href="#home" class="active">
+            Home
+          </a>
+        </li>
 
         <li>
           <a href="#whats-new">
@@ -124,10 +119,10 @@
 
 
   <!-- =====================================================
-       MAIN CONTENT
+       MAIN
   ====================================================== -->
 
-  <main>
+  <main id="home">
 
 
     <!-- ===================================================
@@ -136,13 +131,13 @@
 
     <section
       id="whats-new"
-      class="glass-section whats-new"
+      class="glass-section whats-new-section"
     >
 
       <div class="section-heading">
 
         <span class="section-label">
-          LATEST
+          LATEST UPDATES
         </span>
 
         <h2>
@@ -157,12 +152,14 @@
       </div>
 
 
+      <!-- Carousel -->
+
       <div class="carousel">
 
         <button
           class="carousel-btn prev"
           type="button"
-          aria-label="Previous projects"
+          aria-label="Previous"
         >
           ‹
         </button>
@@ -173,12 +170,13 @@
           <div class="carousel-track">
 
 
+            <!-- CARD 1 -->
+
             <article class="news-card">
 
               <img
                 src="images/ai-enterprise.jpg"
                 alt="AI Enterprise"
-                loading="lazy"
               >
 
               <div class="news-card-content">
@@ -201,12 +199,13 @@
             </article>
 
 
+            <!-- CARD 2 -->
+
             <article class="news-card">
 
               <img
                 src="images/pharma-ai.jpg"
                 alt="AI AgentHub"
-                loading="lazy"
               >
 
               <div class="news-card-content">
@@ -229,12 +228,13 @@
             </article>
 
 
+            <!-- CARD 3 -->
+
             <article class="news-card">
 
               <img
                 src="images/workplace-ai.jpg"
                 alt="AI Workplace"
-                loading="lazy"
               >
 
               <div class="news-card-content">
@@ -257,12 +257,13 @@
             </article>
 
 
+            <!-- CARD 4 -->
+
             <article class="news-card">
 
               <img
                 src="images/whatsnew4.jpg"
-                alt="Technology Project"
-                loading="lazy"
+                alt="Cloud Transformation"
               >
 
               <div class="news-card-content">
@@ -285,12 +286,13 @@
             </article>
 
 
+            <!-- CARD 5 -->
+
             <article class="news-card">
 
               <img
                 src="images/whatsnew5.jpg"
                 alt="Data Engineering"
-                loading="lazy"
               >
 
               <div class="news-card-content">
@@ -313,12 +315,13 @@
             </article>
 
 
+            <!-- CARD 6 -->
+
             <article class="news-card">
 
               <img
                 src="images/whatsnew6.jpg"
                 alt="Enterprise Integration"
-                loading="lazy"
               >
 
               <div class="news-card-content">
@@ -348,7 +351,7 @@
         <button
           class="carousel-btn next"
           type="button"
-          aria-label="Next projects"
+          aria-label="Next"
         >
           ›
         </button>
@@ -356,11 +359,15 @@
       </div>
 
 
+      <!-- Carousel dots -->
+
       <div
         class="dots"
         aria-label="Carousel navigation"
       ></div>
 
+
+      <!-- Animated message -->
 
       <div class="section-message">
 
@@ -369,7 +376,7 @@
         </span>
 
         We help enterprises modernize and scale with
-        future-ready technology solutions.
+        future-ready solutions.
 
       </div>
 
@@ -377,12 +384,12 @@
 
 
     <!-- ===================================================
-         SERVICES
+         OUR EXPERTISE
     ==================================================== -->
 
     <section
       id="services"
-      class="glass-section services"
+      class="glass-section separate-section services-section"
     >
 
       <div class="section-heading">
@@ -396,14 +403,15 @@
         </h2>
 
         <p>
-          Technology capabilities focused on solving complex
-          enterprise challenges.
+          Technology capabilities focused on solving
+          complex enterprise challenges.
         </p>
 
       </div>
 
 
       <div class="service-grid">
+
 
         <article class="service-card">
 
@@ -416,8 +424,8 @@
           </h3>
 
           <p>
-            AI-enabled applications, automation and intelligent
-            enterprise solutions.
+            AI-enabled applications, automation and
+            intelligent enterprise solutions.
           </p>
 
         </article>
@@ -452,8 +460,8 @@
           </h3>
 
           <p>
-            Real-time event streaming and enterprise
-            event-driven architecture.
+            Real-time event streaming and event-driven
+            enterprise architecture.
           </p>
 
         </article>
@@ -488,8 +496,8 @@
           </h3>
 
           <p>
-            Enterprise-grade Java and Spring Boot application
-            development and modernization.
+            Enterprise-grade Java and Spring Boot
+            application development.
           </p>
 
         </article>
@@ -500,12 +508,12 @@
 
 
     <!-- ===================================================
-         IMPACT
+         OUR IMPACT
     ==================================================== -->
 
     <section
       id="metrics"
-      class="glass-section metrics"
+      class="glass-section separate-section impact-section"
     >
 
       <div class="section-heading">
@@ -520,7 +528,7 @@
 
         <p>
           Experience and delivery across modern technology
-          and enterprise transformation initiatives.
+          and enterprise transformation.
         </p>
 
       </div>
@@ -586,12 +594,12 @@
 
 
     <!-- ===================================================
-         PORTFOLIO
+         FEATURED PROJECTS
     ==================================================== -->
 
     <section
       id="portfolio"
-      class="glass-section portfolio"
+      class="glass-section separate-section portfolio-section"
     >
 
       <div class="section-heading">
@@ -633,7 +641,7 @@
 
             <p>
               High-volume event streaming architecture
-              supporting 20M+ events per day.
+              supporting 20M events per day.
             </p>
 
           </div>
@@ -659,7 +667,7 @@
 
             <p>
               Infrastructure modernization initiative
-              targeting significant operational cost reduction.
+              reducing infrastructure costs by 30%.
             </p>
 
           </div>
@@ -703,7 +711,7 @@
 
     <section
       id="contact"
-      class="glass-section contact"
+      class="glass-section separate-section contact-section"
     >
 
       <div class="section-heading">
@@ -727,7 +735,7 @@
       <div class="contact-container">
 
 
-        <!-- Contact Form -->
+        <!-- CONTACT FORM -->
 
         <div class="contact-form-wrapper">
 
@@ -751,84 +759,112 @@
             >
 
 
-            <div class="form-group">
+            <!-- Name -->
+
+            <div class="form-row">
 
               <label for="name">
                 Name
               </label>
 
-              <input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                autocomplete="name"
-                required
-              >
+              <div class="input-wrapper">
+
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  required
+                >
+
+              </div>
 
             </div>
 
 
-            <div class="form-group">
+            <!-- Contact -->
+
+            <div class="form-row">
 
               <label for="contact-number">
-                Contact Number
+                Contact
               </label>
 
-              <input
-                id="contact-number"
-                type="tel"
-                name="contact"
-                placeholder="Enter your contact number"
-                autocomplete="tel"
-                required
-              >
+              <div class="input-wrapper">
+
+                <input
+                  id="contact-number"
+                  type="tel"
+                  name="contact"
+                  placeholder="Enter contact number"
+                  autocomplete="tel"
+                  required
+                >
+
+              </div>
 
             </div>
 
 
-            <div class="form-group">
+            <!-- Email -->
+
+            <div class="form-row">
 
               <label for="email">
                 Email
               </label>
 
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                autocomplete="email"
-                required
-              >
+              <div class="input-wrapper">
+
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Enter email address"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
 
             </div>
 
 
-            <div class="form-group">
+            <!-- Message -->
+
+            <div class="form-row message-row">
 
               <label for="message">
                 Message
               </label>
 
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Tell us about your requirement..."
-                required
-              ></textarea>
+              <div class="input-wrapper">
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us about your requirement..."
+                  required
+                ></textarea>
+
+              </div>
 
             </div>
 
 
-            <button
-              type="submit"
-              class="submit-button"
-            >
-              Send Enquiry
-              <span>→</span>
-            </button>
+            <div class="form-button-row">
+
+              <button
+                type="submit"
+                class="submit-button"
+              >
+                Send Enquiry
+                <span>→</span>
+              </button>
+
+            </div>
 
           </form>
 
@@ -842,12 +878,12 @@
         </div>
 
 
-        <!-- Contact Information -->
+        <!-- CONTACT INFORMATION -->
 
         <div class="contact-info">
 
           <span class="card-tag">
-            COMPANY
+            COMPANY INFORMATION
           </span>
 
 

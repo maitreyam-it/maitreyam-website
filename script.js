@@ -1,292 +1,217 @@
-/* =========================================================
-   MAITREYAM IT CONSULTANCY
-   WEBSITE JAVASCRIPT
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =======================================================
-     CAROUSEL
-  ======================================================= */
+  /* =========================================================
+     WHAT'S NEW CAROUSEL
+  ========================================================= */
 
+  const carousel = document.querySelector(".carousel");
   const track = document.querySelector(".carousel-track");
-  const cards = Array.from(
-    document.querySelectorAll(".news-card")
-  );
+  const cards = document.querySelectorAll(".news-card");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const dotsContainer = document.querySelector(".dots");
 
-  const prevButton =
-    document.querySelector(".prev");
+  let currentIndex = 0;
+  let autoSlide;
 
-  const nextButton =
-    document.querySelector(".next");
-
-  const dotsContainer =
-    document.querySelector(".dots");
+  const cardsPerView = 4;
+  const totalSlides = Math.ceil(cards.length / cardsPerView);
 
 
-  if (
-    track &&
-    cards.length &&
-    prevButton &&
-    nextButton &&
-    dotsContainer
-  ) {
+  /* -------------------------
+     Create Carousel Dots
+  ------------------------- */
 
-    let currentSlide = 0;
-    let cardsPerView = getCardsPerView();
+  if (dotsContainer) {
+    for (let i = 0; i < totalSlides; i++) {
 
+      const dot = document.createElement("span");
 
-    function getCardsPerView() {
+      dot.classList.add("dot");
 
-      if (window.innerWidth <= 700) {
-        return 1;
+      if (i === 0) {
+        dot.classList.add("active");
       }
 
-      if (window.innerWidth <= 1000) {
-        return 2;
-      }
+      dot.addEventListener("click", () => {
+        goToSlide(i);
+        restartAutoSlide();
+      });
 
-      return 4;
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  const dots = document.querySelectorAll(".dot");
+
+
+  /* -------------------------
+     Update Carousel Position
+  ------------------------- */
+
+  function updateSlide() {
+
+    if (!track || cards.length === 0) {
+      return;
     }
 
+    const cardWidth = cards[0].offsetWidth;
 
-    function getTotalSlides() {
+    const gap = 20;
 
-      return Math.ceil(
-        cards.length / cardsPerView
+    const slideWidth = (cardWidth + gap) * cardsPerView;
+
+    track.style.transform =
+      `translateX(-${currentIndex * slideWidth}px)`;
+
+
+    /* Update active dot */
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle(
+        "active",
+        index === currentIndex
       );
+    });
+  }
+
+
+  /* -------------------------
+     Go To Specific Slide
+  ------------------------- */
+
+  function goToSlide(index) {
+
+    if (index < 0) {
+      index = totalSlides - 1;
     }
 
-
-    function createDots() {
-
-      dotsContainer.innerHTML = "";
-
-      const totalSlides =
-        getTotalSlides();
-
-
-      for (
-        let i = 0;
-        i < totalSlides;
-        i++
-      ) {
-
-        const dot =
-          document.createElement("button");
-
-        dot.type = "button";
-
-        dot.className =
-          "dot" +
-          (i === currentSlide
-            ? " active"
-            : "");
-
-        dot.setAttribute(
-          "aria-label",
-          `Go to slide ${i + 1}`
-        );
-
-        dot.addEventListener(
-          "click",
-          () => {
-            currentSlide = i;
-            updateCarousel();
-          }
-        );
-
-        dotsContainer.appendChild(dot);
-      }
+    if (index >= totalSlides) {
+      index = 0;
     }
 
+    currentIndex = index;
 
-    function getSlideDistance() {
-
-      const card =
-        cards[0];
-
-      const cardStyle =
-        window.getComputedStyle(card);
-
-      const cardWidth =
-        card.getBoundingClientRect().width;
-
-      const marginRight =
-        parseFloat(
-          cardStyle.marginRight
-        ) || 0;
-
-      return cardWidth + marginRight;
-    }
+    updateSlide();
+  }
 
 
-    function updateCarousel() {
+  /* -------------------------
+     Next Button
+  ------------------------- */
 
-      const totalSlides =
-        getTotalSlides();
+  if (nextBtn) {
 
+    nextBtn.addEventListener("click", () => {
 
-      if (
-        currentSlide >= totalSlides
-      ) {
-        currentSlide =
-          totalSlides - 1;
-      }
+      goToSlide(currentIndex + 1);
 
+      restartAutoSlide();
 
-      if (
-        currentSlide < 0
-      ) {
-        currentSlide = 0;
-      }
+    });
+  }
 
 
-      const distance =
-        currentSlide *
-        cardsPerView *
-        getSlideDistance();
+  /* -------------------------
+     Previous Button
+  ------------------------- */
+
+  if (prevBtn) {
+
+    prevBtn.addEventListener("click", () => {
+
+      goToSlide(currentIndex - 1);
+
+      restartAutoSlide();
+
+    });
+  }
 
 
-      track.style.transform =
-        `translateX(-${distance}px)`;
+  /* -------------------------
+     Automatic Sliding
+  ------------------------- */
+
+  function startAutoSlide() {
+
+    autoSlide = setInterval(() => {
+
+      goToSlide(currentIndex + 1);
+
+    }, 5000); // 5 seconds
+
+  }
 
 
-      const dots =
-        dotsContainer.querySelectorAll(
-          ".dot"
-        );
+  function stopAutoSlide() {
+
+    clearInterval(autoSlide);
+
+  }
 
 
-      dots.forEach(
-        (dot, index) => {
+  function restartAutoSlide() {
 
-          dot.classList.toggle(
-            "active",
-            index === currentSlide
-          );
+    stopAutoSlide();
 
-        }
-      );
-    }
+    startAutoSlide();
+
+  }
 
 
-    prevButton.addEventListener(
-      "click",
-      () => {
+  /* -------------------------
+     Pause on Mouse Hover
+  ------------------------- */
 
-        const totalSlides =
-          getTotalSlides();
+  if (carousel) {
 
-        currentSlide =
-          currentSlide <= 0
-            ? totalSlides - 1
-            : currentSlide - 1;
-
-        updateCarousel();
-      }
+    carousel.addEventListener(
+      "mouseenter",
+      stopAutoSlide
     );
 
-
-    nextButton.addEventListener(
-      "click",
-      () => {
-
-        const totalSlides =
-          getTotalSlides();
-
-        currentSlide =
-          currentSlide >= totalSlides - 1
-            ? 0
-            : currentSlide + 1;
-
-        updateCarousel();
-      }
-    );
-
-
-    function refreshCarousel() {
-
-      const newCardsPerView =
-        getCardsPerView();
-
-
-      if (
-        newCardsPerView !==
-        cardsPerView
-      ) {
-
-        cardsPerView =
-          newCardsPerView;
-
-        currentSlide = 0;
-
-        createDots();
-      }
-
-
-      updateCarousel();
-    }
-
-
-    createDots();
-
-    updateCarousel();
-
-
-    let resizeTimer;
-
-    window.addEventListener(
-      "resize",
-      () => {
-
-        clearTimeout(resizeTimer);
-
-        resizeTimer =
-          setTimeout(
-            refreshCarousel,
-            150
-          );
-
-      }
+    carousel.addEventListener(
+      "mouseleave",
+      startAutoSlide
     );
 
   }
 
 
-  /* =======================================================
+  /* -------------------------
+     Initial Carousel
+  ------------------------- */
+
+  updateSlide();
+
+  startAutoSlide();
+
+
+  /* =========================================================
      SMOOTH NAVIGATION
-  ======================================================= */
+  ========================================================= */
 
-  const navigationLinks =
-    document.querySelectorAll(
-      '.navbar a[href^="#"]'
-    );
+  const navLinks =
+    document.querySelectorAll(".navbar a");
 
+  navLinks.forEach(link => {
 
-  navigationLinks.forEach(
-    (link) => {
+    link.addEventListener("click", function (event) {
 
-      link.addEventListener(
-        "click",
-        (event) => {
+      const targetId =
+        this.getAttribute("href");
 
-          const targetId =
-            link.getAttribute("href");
+      if (
+        targetId &&
+        targetId.startsWith("#")
+      ) {
 
-          const target =
-            document.querySelector(
-              targetId
-            );
+        const target =
+          document.querySelector(targetId);
 
-
-          if (!target) {
-            return;
-          }
-
+        if (target) {
 
           event.preventDefault();
-
 
           target.scrollIntoView({
             behavior: "smooth",
@@ -294,149 +219,145 @@ document.addEventListener("DOMContentLoaded", () => {
           });
 
         }
-      );
 
-    }
-  );
+      }
+
+    });
+
+  });
 
 
-  /* =======================================================
+  /* =========================================================
      CONTACT FORM
-  ======================================================= */
+  ========================================================= */
 
-  const contactForm =
-    document.getElementById(
-      "contact-form"
-    );
+  const form =
+    document.getElementById("contact-form");
 
-  const formMessage =
-    document.getElementById(
-      "form-success"
-    );
+  const successMsg =
+    document.getElementById("form-success");
 
 
-  if (
-    contactForm &&
-    formMessage
-  ) {
+  if (form && successMsg) {
 
-    contactForm.addEventListener(
+    form.addEventListener(
       "submit",
-      async (event) => {
+      async function (event) {
 
         event.preventDefault();
 
-
         const submitButton =
-          contactForm.querySelector(
-            'button[type="submit"]'
-          );
+          form.querySelector("button[type='submit']");
+
+        const originalText =
+          submitButton.textContent;
 
 
-        if (submitButton) {
+        /* Show submitting state */
 
-          submitButton.disabled =
-            true;
+        submitButton.disabled = true;
 
-          submitButton.innerHTML =
-            "Sending...";
-
-        }
+        submitButton.textContent =
+          "Submitting...";
 
 
         const formData =
-          new FormData(
-            contactForm
-          );
+          new FormData(form);
 
 
         try {
 
           const response =
             await fetch(
-              contactForm.action,
+              form.action,
               {
                 method: "POST",
-
                 body: formData,
-
                 headers: {
-                  Accept:
+                  "Accept":
                     "application/json"
                 }
               }
             );
 
 
-          if (!response.ok) {
-            throw new Error(
-              "Form submission failed"
-            );
+          if (response.ok) {
+
+            const requestId =
+              "REQ-" +
+              Math.floor(
+                100000 +
+                Math.random() * 900000
+              );
+
+
+            successMsg.innerHTML =
+              `
+                <div class="success-icon">✓</div>
+                <div>
+                  <strong>Request Submitted Successfully</strong>
+                  <br>
+                  Your Request ID:
+                  <strong>${requestId}</strong>
+                </div>
+              `;
+
+            successMsg.classList.add("show");
+
+            form.reset();
+
+
+          } else {
+
+            successMsg.innerHTML =
+              `
+                <strong>Something went wrong.</strong>
+                Please try again.
+              `;
+
+            successMsg.classList.add("show");
+
           }
 
 
-          const requestId =
-            "REQ-" +
-            Math.floor(
-              100000 +
-              Math.random() * 900000
-            );
+        } catch (error) {
 
-
-          formMessage.innerHTML =
+          successMsg.innerHTML =
             `
-              <strong>
-                ✓ Enquiry submitted successfully.
-              </strong>
-              <br>
-              Request ID:
-              <strong>${requestId}</strong>
+              <strong>Network error.</strong>
+              Please try again later.
             `;
 
-
-          formMessage.style.display =
-            "block";
-
-
-          contactForm.reset();
+          successMsg.classList.add("show");
 
         }
 
-        catch (error) {
 
-          console.error(
-            "Contact form error:",
-            error
-          );
+        /* Restore button */
 
+        submitButton.disabled = false;
 
-          formMessage.innerHTML =
-            `
-              <strong>
-                Unable to submit the enquiry.
-              </strong>
-              <br>
-              Please try again or contact us directly.
-            `;
-
-
-          formMessage.style.display =
-            "block";
-        }
-
-
-        if (submitButton) {
-
-          submitButton.disabled =
-            false;
-
-          submitButton.innerHTML =
-            `Send Enquiry <span>→</span>`;
-        }
+        submitButton.textContent =
+          originalText;
 
       }
     );
 
   }
+
+
+  /* =========================================================
+     WINDOW RESIZE
+     Recalculate carousel position
+  ========================================================= */
+
+  window.addEventListener(
+    "resize",
+    () => {
+
+      updateSlide();
+
+    }
+  );
 
 });
