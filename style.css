@@ -19,6 +19,16 @@ body {
   margin: 20px auto;
   max-width: 1240px;
 }
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.logo { height: 80px; }
+.company-text h1 { font-size: 22px; margin: 0; color: #fff; }
+.company-text p { margin: 5px 0 0; font-size: 16px; color: #1abc9c; }
 
 /* Navbar */
 .navbar {
@@ -47,25 +57,17 @@ body {
   text-align: center;
 }
 
-/* Shared glassy style */
-.glassy-section {
-  padding: 50px 20px;
+/* What's New */
+.whats-new {
   background: rgba(10,25,47,0.45);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   color: #fff;
   margin: 40px auto;
   max-width: 1240px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  padding: 50px 20px;
 }
-.glassy-section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #f1c40f;
-}
-
-/* What's New */
-.whats-new { composes: glassy-section; }
+.whats-new h2 { font-size: 28px; margin-bottom: 30px; color: #f1c40f; }
 .carousel { position: relative; overflow: hidden; max-width: 1240px; margin: 0 auto; }
 .carousel-track { display: flex; transition: transform 0.5s ease; }
 .news-card { flex: 0 0 300px; margin: 0 10px; background: rgba(255,255,255,0.15); border-radius: 8px; text-align: left; }
@@ -79,24 +81,56 @@ body {
 .dot.active { background: #1abc9c; }
 .whatsnew-message { margin-top: 20px; font-size: 18px; color: #1abc9c; font-weight: bold; }
 
-/* Services */
-.services { composes: glassy-section; }
+/* Services (Our Expertise) */
+.services {
+  background: rgba(10,25,47,0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #fff;
+  margin: 40px auto;
+  max-width: 1240px;
+  padding: 50px 20px;
+}
 .service-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
 .service { background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; width:200px; }
 
-/* Metrics */
-.metrics { composes: glassy-section; }
+/* Metrics (Our Impact) */
+.metrics {
+  background: rgba(10,25,47,0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #fff;
+  margin: 40px auto;
+  max-width: 1240px;
+  padding: 50px 20px;
+}
 .metrics-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; }
 .metric h3 { font-size:40px; margin:0; color:#1abc9c; }
 .metric p { margin:5px 0 0; }
 
-/* Portfolio */
-.portfolio-highlight { composes: glassy-section; }
+/* Portfolio (Featured Projects) */
+.portfolio-highlight {
+  background: rgba(10,25,47,0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #fff;
+  margin: 40px auto;
+  max-width: 1240px;
+  padding: 50px 20px;
+}
 .portfolio-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
 .card { background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; width:250px; }
 
 /* Contact */
-.contact { composes: glassy-section; }
+.contact {
+  background: rgba(10,25,47,0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #fff;
+  margin: 40px auto;
+  max-width: 1240px;
+  padding: 50px 20px;
+}
 .contact-container { display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; }
 .contact-form { flex:1; background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; text-align:left; }
 .contact-form label { display:block; margin-top:10px; }
