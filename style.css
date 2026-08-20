@@ -57,7 +57,7 @@ body {
   text-align: center;
 }
 
-/* What's New */
+/* What's New (Carousel with scroll + arrows) */
 .whats-new {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
@@ -67,6 +67,54 @@ body {
   margin: 40px auto;
 }
 .whats-new h2 { font-size: 28px; margin-bottom: 30px; color: #f1c40f; }
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;       /* एकाच ओळीत cards */
+  transition: transform 0.5s ease;
+}
+.news-card {
+  flex: 0 0 300px;
+  margin: 0 10px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  text-align: left;
+}
+.news-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; }
+.news-card h3 { margin: 15px; color: #1abc9c; }
+.news-card p { margin: 0 15px 15px; color: #eee; }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots { text-align: center; margin-top: 15px; }
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.dot.active { background: #1abc9c; }
 
 /* Services (Our Expertise) */
 .services {
