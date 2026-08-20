@@ -9,82 +9,54 @@
 </head>
 <body>
   
- <!-- Header with Logo + Company Name -->
-<header class="site-header">
-  <div class="header-container">
-    <img src="images/logo.png" alt="Company Logo" class="logo">
-    <div class="company-text">
-      <h1>MAITREYAM IT CONSULTANCY & SERVICES (OPC) PRIVATE LIMITED</h1>
-      <p>Driving Digital Transformation with AI, Cloud, Kafka, and Enterprise Integration</p>
-    </div>
-  </div>
-</header>
-
-<!-- Navigation Bar (directly below header) -->
-<nav class="navbar">
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#whats-new">What's New</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#metrics">Impact</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
- 
- <!-- What's New -->
-<section id="whats-new" class="whats-new">
-  <h2>What's New</h2>
-  <div class="carousel">
-    <div class="carousel-track">
-      <div class="news-card">
-        <img src="images/ai-enterprise.jpg" alt="AI-ready enterprises">
-        <h3>Building AI-ready enterprises</h3>
-        <p>TCS, AMD, and Nutanix leaders discuss how AI-ready platforms and ecosystem-led approaches can help enterprises transform with agility and scale.</p>
-        <a href="#">Read more →</a>
-      </div>
-      <div class="news-card">
-        <img src="images/pharma-ai.jpg" alt="Pharma AI">
-        <h3>TCS launches ADD™ AgentHub</h3>
-        <p>An enterprise-ready agentic AI platform that helps pharma companies scale AI across clinical development and pharmacovigilance.</p>
-        <a href="#">Read more →</a>
-      </div>
-      <div class="news-card">
-        <img src="images/workplace-ai.jpg" alt="AI workplace operations">
-        <h3>AI-powered workplace operations</h3>
-        <p>Experts from Everest Group, GoTo and TCS discuss how AI-native operations are transforming workplace support and employee experience.</p>
-        <a href="#">Read more →</a>
-      </div>
-      <div class="news-card">
-        <img src="images/whatsnew4.jpg" alt="Project 4">
-        <h3>Project 4</h3>
-        <p>Short description of project 4.</p>
-        <a href="#">Read more →</a>
-      </div>
-      <div class="news-card">
-        <img src="images/whatsnew5.jpg" alt="Project 5">
-        <h3>Project 5</h3>
-        <p>Short description of project 5.</p>
-        <a href="#">Read more →</a>
-      </div>
-      <div class="news-card">
-        <img src="images/whatsnew6.jpg" alt="Project 6">
-        <h3>Project 6</h3>
-        <p>Short description of project 6.</p>
-        <a href="#">Read more →</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <img src="images/logo.png" alt="Company Logo" class="logo">
+      <div class="company-text">
+        <h1>MAITREYAM IT CONSULTANCY & SERVICES (OPC) PRIVATE LIMITED</h1>
+        <p>Driving Digital Transformation with AI, Cloud, Kafka, and Enterprise Integration</p>
       </div>
     </div>
-    <!-- Navigation arrows -->
-    <button class="prev">‹</button>
-    <button class="next">›</button>
-    <!-- Dots -->
-    <div class="dots"></div>
-  </div>
-</section>
+  </header>
 
-  
-  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#whats-new">What's New</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#metrics">Impact</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to MaitreyaM</h1>
+      <p>We help enterprises modernize and scale with future‑ready solutions.</p>
+    </div>
+  </section>
+
+  <!-- What's New Carousel -->
+  <section id="whats-new" class="whats-new">
+    <h2>What's New</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="news-card"><img src="images/ai-enterprise.jpg"><h3>Building AI-ready enterprises</h3><p>...</p></div>
+        <div class="news-card"><img src="images/pharma-ai.jpg"><h3>TCS launches ADD™ AgentHub</h3><p>...</p></div>
+        <div class="news-card"><img src="images/workplace-ai.jpg"><h3>AI-powered workplace operations</h3><p>...</p></div>
+        <div class="news-card"><img src="images/whatsnew4.jpg"><h3>Project 4</h3><p>...</p></div>
+        <div class="news-card"><img src="images/whatsnew5.jpg"><h3>Project 5</h3><p>...</p></div>
+        <div class="news-card"><img src="images/whatsnew6.jpg"><h3>Project 6</h3><p>...</p></div>
+      </div>
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+      <div class="dots"></div>
+    </div>
+  </section>
 
   <!-- Services -->
   <section id="services" class="services">
@@ -123,29 +95,18 @@
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <div class="contact-container">
-      <!-- Left: Form -->
       <form id="contact-form" action="https://formsubmit.co/info.maitreyam@gmail.com" method="POST" class="contact-form">
-        <label>Name:</label>
-        <input type="text" name="name" required>
-        <label>Contact:</label>
-        <input type="text" name="contact" required>
-        <label>Email:</label>
-        <input type="email" name="email" required>
-        <label>Message:</label>
-        <textarea name="message" rows="5" required></textarea>
+        <label>Name:</label><input type="text" name="name" required>
+        <label>Contact:</label><input type="text" name="contact" required>
+        <label>Email:</label><input type="email" name="email" required>
+        <label>Message:</label><textarea name="message" rows="5" required></textarea>
         <button type="submit">Submit</button>
       </form>
-
-      <!-- Right: Info -->
       <div class="contact-info">
-        <h3>Director</h3>
-        <p>Suryakant Sangamnath Bhalke</p>
-        <h3>Office</h3>
-        <p>Pune, Maharashtra, India</p>
-        <h3>Phone</h3>
-        <p>+91-9665303369</p>
-        <h3>Email</h3>
-        <p>info.maitreyam@gmail.com</p>
+        <h3>Director</h3><p>Suryakant Sangamnath Bhalke</p>
+        <h3>Office</h3><p>Pune, Maharashtra, India</p>
+        <h3>Phone</h3><p>+91-9665303369</p>
+        <h3>Email</h3><p>info.maitreyam@gmail.com</p>
       </div>
     </div>
     <div id="form-success" class="success-message"></div>
