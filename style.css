@@ -4,7 +4,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: url('images/tech-bg.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #fff; /* default text white */
+  color: #000; /* default text black */
   text-align: center;
 }
 
@@ -12,15 +12,15 @@ body {
 .site-header {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
-  color: #fff;
+  color: #000;
   padding: 20px;
   text-align: center;
   border-radius: 12px;
   margin: 20px auto;
   max-width: 1240px;
 }
-.company-text h1 { font-size: 22px; margin: 0; color: #00ffff; }
-.company-text p { margin: 5px 0 0; font-size: 16px; color: #00ffff; }
+.company-text h1 { font-size: 22px; margin: 0; color: #000; }
+.company-text p { margin: 5px 0 0; font-size: 16px; color: #000; }
 
 /* Navbar */
 .navbar {
@@ -36,16 +36,15 @@ body {
 .navbar a {
   display: block;
   padding: 20px 40px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 .navbar a:hover {
-  background-color: rgba(0,255,255,0.2);
-  color: #00ffff;
-  text-shadow: 0 0 8px #00ffff;
+  background-color: rgba(0,0,0,0.1);
+  color: #000;
 }
 
 /* What's New */
@@ -53,11 +52,11 @@ body {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  color: #fff;
+  color: #000;
   padding: 50px 20px;
   margin: 40px auto;
 }
-.whats-new h2 { font-size: 28px; margin-bottom: 30px; color: #00ffff; }
+.whats-new h2 { font-size: 28px; margin-bottom: 30px; color: #000; }
 
 /* Carousel */
 .carousel { position: relative; overflow: hidden; max-width: 1240px; margin: 0 auto; }
@@ -68,84 +67,84 @@ body {
   background: rgba(255,255,255,0.12);
   border-radius: 8px;
   text-align: left;
-  color: #fff;
+  color: #000;
 }
-.news-card h3 { margin: 15px; color: #00ffff; }
-.news-card p { margin: 0 15px 15px; color: #fff; }
+.news-card h3 { margin: 15px; color: #000; }
+.news-card p { margin: 0 15px 15px; color: #000; }
 .prev, .next {
   position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(0,0,0,0.5); color: #fff;
+  background: rgba(0,0,0,0.5); color: #000;
   border: none; padding: 10px; cursor: pointer; border-radius: 50%;
 }
 .prev { left: 10px; } .next { right: 10px; }
 .dot { display: inline-block; width: 12px; height: 12px; background: #bbb; border-radius: 50%; margin: 0 5px; cursor: pointer; }
-.dot.active { background: #00ffff; }
+.dot.active { background: #000; }
 
 /* Services */
 .services {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  color: #fff;
+  color: #000;
   padding: 50px 20px;
   margin: 40px auto;
 }
-.services h2 { color: #00ffff; }
-.service { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:200px; color:#fff; }
+.services h2 { color: #000; }
+.service { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:200px; color:#000; }
 
 /* Metrics */
 .metrics {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  color: #fff;
+  color: #000;
   padding: 50px 20px;
   margin: 40px auto;
 }
-.metrics h2 { color: #00ffff; }
-.metric h3 { font-size:40px; margin:0; color:#00ffff; }
-.metric p { margin:5px 0 0; color:#fff; }
+.metrics h2 { color: #000; }
+.metric h3 { font-size:40px; margin:0; color:#000; }
+.metric p { margin:5px 0 0; color:#000; }
 
 /* Portfolio */
 .portfolio-highlight {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  color: #fff;
+  color: #000;
   padding: 50px 20px;
   margin: 40px auto;
 }
-.portfolio-highlight h2 { color: #00ffff; }
-.card { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:250px; color:#fff; }
+.portfolio-highlight h2 { color: #000; }
+.card { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:250px; color:#000; }
 
 /* Contact */
 .contact {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  color: #fff;
+  color: #000;
   padding: 50px 20px;
   margin: 40px auto;
 }
-.contact h2 { color: #00ffff; }
-.contact-form { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; color:#fff; }
+.contact h2 { color: #000; }
+.contact-form { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; color:#000; }
 .contact-form button {
-  margin-top:15px; background:#00ffff; color:#000;
+  margin-top:15px; background:#000; color:#fff;
   border:none; padding:10px 20px; cursor:pointer; border-radius:4px;
   transition: box-shadow 0.3s;
 }
-.contact-form button:hover { box-shadow: 0 0 12px #00ffff; }
-.contact-info { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; color:#fff; }
-.contact-info h3 { margin-top:15px; color:#00ffff; }
+.contact-form button:hover { box-shadow: 0 0 12px #000; }
+.contact-info { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; color:#000; }
+.contact-info h3 { margin-top:15px; color:#000; }
 
 /* Footer */
 footer {
   background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
-  color: #fff;
+  color: #000;
   padding: 15px;
   text-align: center;
   border-radius: 12px;
   margin: 40px auto 0;
 }
-footer p { color: #00ffff; }
+footer p { color: #000; }
