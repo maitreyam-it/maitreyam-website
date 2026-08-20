@@ -35,6 +35,34 @@ body {
   color: #f1c40f;
 }
 
+/* Header with Logo + Company Name */
+.site-header {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  text-align: center;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.logo {
+  height: 80px;
+  width: auto;
+}
+.company-text h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #fff;
+}
+.company-text p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #1abc9c;
+}
+
 /* Hero Section */
 .hero {
   height: 100vh;
