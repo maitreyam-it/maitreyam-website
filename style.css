@@ -10,30 +10,19 @@ body {
 
 /* Header */
 .site-header {
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   color: #fff;
   padding: 20px;
   text-align: center;
   border-radius: 12px;
-  margin: 20px auto;
-  max-width: 1240px;
+  width: 100%;
 }
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.logo { height: 80px; }
-.company-text h1 { font-size: 22px; margin: 0; color: #fff; }
-.company-text p { margin: 5px 0 0; font-size: 16px; color: #1abc9c; }
 
 /* Navbar */
 .navbar {
   width: 100%;
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   height: 70px;
   display: flex;
@@ -59,36 +48,22 @@ body {
 
 /* What's New */
 .whats-new {
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   color: #fff;
-  margin: 40px auto;
-  max-width: 1240px;
+  width: 100%;
   padding: 50px 20px;
 }
 .whats-new h2 { font-size: 28px; margin-bottom: 30px; color: #f1c40f; }
-.carousel { position: relative; overflow: hidden; max-width: 1240px; margin: 0 auto; }
-.carousel-track { display: flex; transition: transform 0.5s ease; }
-.news-card { flex: 0 0 300px; margin: 0 10px; background: rgba(255,255,255,0.15); border-radius: 8px; text-align: left; }
-.news-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; }
-.news-card h3 { margin: 15px; color: #1abc9c; }
-.news-card p { margin: 0 15px 15px; color: #eee; }
-.prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px; cursor: pointer; border-radius: 50%; }
-.prev { left: 10px; } .next { right: 10px; }
-.dots { text-align: center; margin-top: 15px; }
-.dot { display: inline-block; width: 12px; height: 12px; background: #bbb; border-radius: 50%; margin: 0 5px; cursor: pointer; }
-.dot.active { background: #1abc9c; }
-.whatsnew-message { margin-top: 20px; font-size: 18px; color: #1abc9c; font-weight: bold; }
 
 /* Services (Our Expertise) */
 .services {
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   color: #fff;
-  margin: 40px auto;
-  max-width: 1240px;
+  width: 100%;
   padding: 50px 20px;
 }
 .service-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
@@ -96,12 +71,11 @@ body {
 
 /* Metrics (Our Impact) */
 .metrics {
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   color: #fff;
-  margin: 40px auto;
-  max-width: 1240px;
+  width: 100%;
   padding: 50px 20px;
 }
 .metrics-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; }
@@ -110,12 +84,11 @@ body {
 
 /* Portfolio (Featured Projects) */
 .portfolio-highlight {
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   color: #fff;
-  margin: 40px auto;
-  max-width: 1240px;
+  width: 100%;
   padding: 50px 20px;
 }
 .portfolio-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
@@ -123,12 +96,11 @@ body {
 
 /* Contact */
 .contact {
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   color: #fff;
-  margin: 40px auto;
-  max-width: 1240px;
+  width: 100%;
   padding: 50px 20px;
 }
 .contact-container { display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; }
@@ -140,22 +112,13 @@ body {
 .contact-info { flex:1; background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; text-align:left; }
 .contact-info h3 { margin-top:15px; color:#1abc9c; }
 
-/* Success Message */
-.success-message { display:none; margin-top:20px; padding:15px; background:#1abc9c; color:#fff; border-radius:5px; animation:fadeIn 1s ease-in-out; }
-@keyframes fadeIn { from { opacity:0; transform:scale(0.95); } to { opacity:1; transform:scale(1); } }
-
 /* Footer */
 footer {
-  background: rgba(10,25,47,0.45);
+  background: rgba(10,25,47,0.60);
   backdrop-filter: blur(8px);
   color: #fff;
   padding: 15px;
   text-align: center;
   border-radius: 12px;
-  margin: 40px auto 0;
-  max-width: 1240px;
+  width: 100%;
 }
-
-/* Responsive */
-@media (max-width:768px){ .logo { height:80px; } .contact-container { flex-direction:column; } }
-@media (max-width:480px){ .logo { height:60px; } }
