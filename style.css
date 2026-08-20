@@ -10,8 +10,8 @@ body {
 
 /* Header */
 .site-header {
-  background: rgba(0,0,0,0.4); /* lighter transparency */
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.35); /* medium transparency */
+  backdrop-filter: blur(6px);
   padding: 20px;
 }
 .header-container {
@@ -28,13 +28,13 @@ body {
 /* Navbar */
 .navbar {
   width: 100%;
-  background: rgba(10,25,47,0.6); /* glassy navy */
-  backdrop-filter: blur(10px);
+  background: rgba(10,25,47,0.5); /* medium glassy navy */
+  backdrop-filter: blur(8px);
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; }
 .navbar a {
@@ -47,22 +47,22 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 .navbar a:hover {
-  background-color: rgba(26,188,156,0.8);
+  background-color: rgba(26,188,156,0.7);
   color: #f1c40f;
   width: 100%;
   text-align: center;
 }
 
-/* Shared glassy navy style */
+/* Shared medium glassy style */
 .glassy-section {
   padding: 50px 20px;
-  background: rgba(10, 25, 47, 0.6); /* lighter transparency */
-  backdrop-filter: blur(12px);
+  background: rgba(10, 25, 47, 0.5); /* medium transparency */
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   color: #fff;
   margin: 40px auto;
   max-width: 1240px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 .glassy-section h2 {
   font-size: 28px;
@@ -74,7 +74,7 @@ body {
 .whats-new { composes: glassy-section; }
 .carousel { position: relative; overflow: hidden; max-width: 1240px; margin: 0 auto; }
 .carousel-track { display: flex; transition: transform 0.5s ease; }
-.news-card { flex: 0 0 300px; margin: 0 10px; background: rgba(255,255,255,0.15); border-radius: 8px; text-align: left; }
+.news-card { flex: 0 0 300px; margin: 0 10px; background: rgba(255,255,255,0.12); border-radius: 8px; text-align: left; }
 .news-card img { width: 100%; height: 200px; object-fit: cover; }
 .news-card h3 { margin: 15px; color: #1abc9c; }
 .news-card p { margin: 0 15px 15px; color: #eee; }
@@ -88,7 +88,7 @@ body {
 /* Services */
 .services { composes: glassy-section; }
 .service-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.service { background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; width:200px; }
+.service { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:200px; }
 
 /* Metrics */
 .metrics { composes: glassy-section; }
@@ -99,17 +99,17 @@ body {
 /* Portfolio */
 .portfolio-highlight { composes: glassy-section; }
 .portfolio-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.card { background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; width:250px; }
+.card { background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; width:250px; }
 
 /* Contact */
 .contact { composes: glassy-section; }
 .contact-container { display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; }
-.contact-form { flex:1; background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; text-align:left; }
+.contact-form { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; }
 .contact-form label { display:block; margin-top:10px; }
 .contact-form input, .contact-form textarea { width:100%; padding:10px; margin-top:5px; border:none; border-radius:4px; }
 .contact-form button { margin-top:15px; background:#1abc9c; color:#fff; border:none; padding:10px 20px; cursor:pointer; border-radius:4px; }
 .contact-form button:hover { background:#16a085; }
-.contact-info { flex:1; background: rgba(255,255,255,0.15); padding:20px; border-radius:8px; text-align:left; }
+.contact-info { flex:1; background: rgba(255,255,255,0.12); padding:20px; border-radius:8px; text-align:left; }
 .contact-info h3 { margin-top:15px; color:#1abc9c; }
 
 /* Success Message */
@@ -118,8 +118,8 @@ body {
 
 /* Footer */
 footer {
-  background: rgba(10, 25, 47, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(10, 25, 47, 0.5);
+  backdrop-filter: blur(8px);
   color: #fff;
   padding: 15px;
   text-align: center;
