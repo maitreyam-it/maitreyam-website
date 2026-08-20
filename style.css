@@ -1,11 +1,21 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #000 url('images/matrix-bg.gif') repeat; /* animated matrix-style background */
+  background: url('images/tech-bg.jpg') no-repeat center center fixed; /* replace with your image */
   background-size: cover;
   color: #fff;
   text-align: center;
 }
+
+/* What's New message */
+.whatsnew-message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+
 
 /* Header */
 .site-header { background: rgba(0,0,0,0.7); padding: 20px; }
