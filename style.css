@@ -24,14 +24,18 @@ body {
    Header & Logo
 =========================== */
 .site-header {
-  @extend .section;
+  max-width: 1240px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
   text-align: center;
 }
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
 }
 .logo { height: 80px; }
@@ -49,8 +53,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   position: relative;
+  overflow: hidden;
 }
 .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; }
 .navbar a {
@@ -66,7 +70,6 @@ body {
 /* Unique scrolling item */
 .navbar .scroll-item {
   position: absolute;
-  right: 0;
   white-space: nowrap;
   animation: scrollText 12s linear infinite;
   font-weight: bold;
