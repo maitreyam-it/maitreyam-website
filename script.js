@@ -6,13 +6,13 @@ const nextBtn = document.querySelector('.next');
 const dotsContainer = document.querySelector('.dots');
 
 let currentIndex = 0;
-const cardsPerView = 4; // show 4 at a time
-const cardWidth = 300;  // width of each card
-const cardMargin = 20;  // left+right margin (10px each side)
+const cardsPerView = 4;
+const cardWidth = 300;
+const cardMargin = 20;
 const slideWidth = cardsPerView * (cardWidth + cardMargin);
 const totalSlides = Math.ceil(cards.length / cardsPerView);
 
-// Create dots dynamically
+// Create dots
 for (let i = 0; i < totalSlides; i++) {
   const dot = document.createElement('span');
   dot.classList.add('dot');
@@ -38,23 +38,17 @@ prevBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
   updateSlide();
 });
-
-// Initialize carousel
 updateSlide();
-
 
 // --- Smooth Scroll for Navbar ---
 document.querySelectorAll('.navbar a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     if (this.getAttribute('href').startsWith('#')) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
-
 
 // --- Contact Form Submission ---
 const form = document.getElementById('contact-form');
