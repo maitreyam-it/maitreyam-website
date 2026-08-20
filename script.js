@@ -1,4 +1,4 @@
-// --- 1. Horizontal Slider ---
+// --- Horizontal Slider ---
 let currentSlide = 0;
 const slides = document.querySelector('.slides');
 const totalSlides = slides ? document.querySelectorAll('.slides img').length : 0;
@@ -14,11 +14,11 @@ function nextSlide() {
   showSlide(currentSlide);
 }
 if (slides) {
-  setInterval(nextSlide, 4000); // auto change every 4s
+  setInterval(nextSlide, 4000);
   showSlide(currentSlide);
 }
 
-// --- 2. Fade Slider ---
+// --- Fade Slider ---
 let fadeIndex = 0;
 const fadeSlides = document.querySelectorAll('.fade-slide');
 function showFadeSlide(i) {
@@ -32,7 +32,7 @@ if (fadeSlides.length > 0) {
   showFadeSlide(fadeIndex);
 }
 
-// --- 3. Hero Slider ---
+// --- Hero Slider ---
 let heroIndex = 0;
 const heroSlides = document.querySelectorAll('.hero-slide');
 function showHeroSlide(i) {
@@ -46,12 +46,12 @@ if (heroSlides.length > 0) {
   showHeroSlide(heroIndex);
 }
 
-// --- 4. Card Carousel ---
+// --- Card Carousel ---
 let cardIndex = 0;
 const cardTrack = document.querySelector('.card-track');
 const cardCount = cardTrack ? document.querySelectorAll('.card').length : 0;
 function showCardSlide(i) {
-  if (cardTrack) cardTrack.style.transform = `translateX(-${i * 320}px)`; // 300px card + margin
+  if (cardTrack) cardTrack.style.transform = `translateX(-${i * 320}px)`;
 }
 if (cardTrack) {
   setInterval(() => {
@@ -60,6 +60,18 @@ if (cardTrack) {
   }, 4000);
   showCardSlide(cardIndex);
 }
+
+// --- Smooth Scroll for Navbar ---
+document.querySelectorAll('.navbar a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    if (this.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 
 // --- Contact Form Submission ---
 const form = document.getElementById('contact-form');
@@ -78,13 +90,5 @@ if (form) {
 
     if (response.ok) {
       const requestId = 'REQ-' + Math.floor(Math.random() * 1000000);
-      successMsg.innerHTML = `✅ Yes, your request has been submitted!<br>Your Request ID is <strong>${requestId}</strong><br><br>
-        <a href="https://wa.me/919665303369?text=Hello%20MaitreyaM,%20I%20submitted%20a%20form.%20My%20Request%20ID%20is%20${requestId}" target="_blank" style="color:white;text-decoration:underline;">
-        📲 Notify us on WhatsApp</a>`;
-      successMsg.style.display = 'block';
-      form.reset();
-    } else {
-      alert("❌ There was a problem sending your message. Please try again.");
-    }
-  });
-}
+      successMsg.innerHTML = `✅ Request submitted!<br>Your Request ID: <strong>${requestId}</strong><br><br>
+        <

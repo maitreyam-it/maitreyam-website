@@ -9,59 +9,54 @@
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#whats-new">What's New</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#metrics">Impact</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero Section -->
-  <header class="hero">
+  <section id="hero" class="hero">
     <div class="hero-content">
       <img src="images/logo.png" alt="Company Logo" class="logo">
       <h1>MAITREYAM IT CONSULTANCY & SERVICES (OPC) PRIVATE LIMITED</h1>
       <p>Driving Digital Transformation with AI, Cloud, Kafka, and Enterprise Integration</p>
-      <a href="contact.html" class="btn">Get in Touch</a>
     </div>
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="insights.html">Insights</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  
-  </header>
-  
-<section class="whats-new">
-  <h2>What's New</h2>
-  <div class="news-grid">
-    <!-- Card 1 -->
-    <div class="news-card">
-      <img src="images/ai-enterprise.jpg" alt="AI-ready enterprises">
-      <h3>Building AI-ready enterprises</h3>
-      <p>TCS, AMD, and Nutanix leaders discuss how AI-ready platforms and ecosystem-led approaches can help enterprises transform with agility and scale.</p>
-      <a href="#">Read more →</a>
-    </div>
+  </section>
 
-    <!-- Card 2 -->
-    <div class="news-card">
-      <img src="images/pharma-ai.jpg" alt="Pharma AI">
-      <h3>TCS launches ADD™ AgentHub</h3>
-      <p>An enterprise-ready agentic AI platform that helps pharma companies scale AI across clinical development and pharmacovigilance.</p>
-      <a href="#">Read more →</a>
+  <!-- What's New -->
+  <section id="whats-new" class="whats-new">
+    <h2>What's New</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="images/ai-enterprise.jpg" alt="AI-ready enterprises">
+        <h3>Building AI-ready enterprises</h3>
+        <p>TCS, AMD, and Nutanix leaders discuss how AI-ready platforms and ecosystem-led approaches can help enterprises transform with agility and scale.</p>
+        <a href="#">Read more →</a>
+      </div>
+      <div class="news-card">
+        <img src="images/pharma-ai.jpg" alt="Pharma AI">
+        <h3>TCS launches ADD™ AgentHub</h3>
+        <p>An enterprise-ready agentic AI platform that helps pharma companies scale AI across clinical development and pharmacovigilance.</p>
+        <a href="#">Read more →</a>
+      </div>
+      <div class="news-card">
+        <img src="images/workplace-ai.jpg" alt="AI workplace operations">
+        <h3>AI-powered workplace operations</h3>
+        <p>Experts from Everest Group, GoTo and TCS discuss how AI-native operations are transforming workplace support and employee experience.</p>
+        <a href="#">Read more →</a>
+      </div>
     </div>
-
-    <!-- Card 3 -->
-    <div class="news-card">
-      <img src="images/workplace-ai.jpg" alt="AI workplace operations">
-      <h3>AI-powered workplace operations</h3>
-      <p>Experts from Everest Group, GoTo and TCS discuss how AI-native operations are transforming workplace support and employee experience.</p>
-      <a href="#">Read more →</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Services -->
-  <section class="services">
+  <section id="services" class="services">
     <h2>Our Expertise</h2>
     <div class="service-grid">
       <div class="service">AI Solutions</div>
@@ -73,7 +68,7 @@
   </section>
 
   <!-- Metrics -->
-  <section class="metrics">
+  <section id="metrics" class="metrics">
     <h2>Our Impact</h2>
     <div class="metrics-grid">
       <div class="metric"><h3>50+</h3><p>Projects Delivered</p></div>
@@ -83,8 +78,8 @@
     </div>
   </section>
 
-  <!-- Portfolio Highlights -->
-  <section class="portfolio-highlight">
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio-highlight">
     <h2>Featured Projects</h2>
     <div class="portfolio-grid">
       <div class="card">Telecom Kafka Migration – 20M events/day</div>
@@ -93,9 +88,41 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <!-- Left: Form -->
+      <form id="contact-form" action="https://formsubmit.co/info.maitreyam@gmail.com" method="POST" class="contact-form">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <label>Contact:</label>
+        <input type="text" name="contact" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Message:</label>
+        <textarea name="message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Right: Info -->
+      <div class="contact-info">
+        <h3>Director</h3>
+        <p>Suryakant Sangamnath Bhalke</p>
+        <h3>Office</h3>
+        <p>Pune, Maharashtra, India</p>
+        <h3>Phone</h3>
+        <p>+91-9665303369</p>
+        <h3>Email</h3>
+        <p>info.maitreyam@gmail.com</p>
+      </div>
+    </div>
+    <div id="form-success" class="success-message"></div>
+  </section>
+
   <footer>
     <p>© 2026 MAITREYAM IT CONSULTANCY & SERVICES (OPC) PRIVATE LIMITED</p>
   </footer>
+
 </body>
 </html>
