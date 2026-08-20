@@ -164,3 +164,86 @@ footer { background:#2c3e50; color:white; padding:10px; margin-top:20px; }
   .logo { height:50px; }
   header h1 { font-size:16px; }
 }
+
+.whats-new {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+.whats-new h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+.news-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.news-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.news-card:hover {
+  transform: translateY(-5px);
+}
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.news-card h3 {
+  font-size: 18px;
+  margin: 15px;
+  color: #1abc9c;
+}
+.news-card p {
+  font-size: 14px;
+  margin: 0 15px 15px;
+  color: #555;
+}
+.news-card a {
+  display: block;
+  margin: 0 15px 15px;
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+}
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #1abc9c; /* strip color */
+  padding: 0;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.navbar li {
+  margin: 0;
+}
+.navbar a {
+  display: block;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+.navbar a:hover {
+  background-color: #16a085; /* darker shade on hover */
+  color: #f1c40f; /* text changes to gold */
+}
