@@ -18,6 +18,48 @@ if (slides) {
   showSlide(currentSlide);
 }
 
+
+
+const track = document.querySelector('.carousel-track');
+const cards = document.querySelectorAll('.news-card');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.dots');
+
+let currentIndex = 0;
+const cardsPerView = 3; // show 3 at a time
+const totalSlides = Math.ceil(cards.length / cardsPerView);
+
+// Create dots
+for (let i = 0; i < totalSlides; i++) {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+}
+const dots = document.querySelectorAll('.dot');
+
+function updateSlide() {
+  track.style.transform = `translateX(-${currentIndex * 960}px)`; // 960px = 3 cards * 300px + margins
+  dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+}
+function goToSlide(i) {
+  currentIndex = i;
+  updateSlide();
+}
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlide();
+});
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlide();
+});
+
+
+
+
 // --- Fade Slider ---
 let fadeIndex = 0;
 const fadeSlides = document.querySelectorAll('.fade-slide');
